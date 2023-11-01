@@ -1,0 +1,48 @@
+dialog{
+  color: black;
+  background-color: #fff;
+  border-radius: .5rem;
+  width: 400px;
+  padding: 0.8rem;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+  
+  border: none;
+
+}
+
+dialog[open]{
+  top: 50%;
+  transform: translateY(-100%);
+}
+
+dialog[open].showOverlay{
+  top: 0 !important;
+  transform: translateY(0) !important;
+}
+
+dialog::backdrop{
+  background-color: rgba(255, 255, 255, 0.144);
+}
+
+dialog > header{
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+ dialog > header > .close-btn{
+  align-self: flex-start;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  place-items: center;
+  border-radius: 50%;
+  border: none;
+  padding: 6px;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease-in-out;
+ }
+
+ dialog > header > .close-btn:hover{
+  background-color: #ddd;
+ }
+
